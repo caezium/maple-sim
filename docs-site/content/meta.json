@@ -1,0 +1,14 @@
+{
+  "title": "Docs",
+  "pages": [
+    "index",
+    "simulation-details",
+    "getting-started",
+    "core-concepts",
+    "swerve-simulation",
+    "mechanisms",
+    "match-simulation",
+    "contribution",
+    "release-notes"
+  ]
+}

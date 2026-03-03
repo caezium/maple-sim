@@ -1,0 +1,10 @@
+node_modules
+.next
+.source
+out
+.env*
+*.log
+__pycache__/
+public/javadocs/
+public/vendordep/
+public/media/

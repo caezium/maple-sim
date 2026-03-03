@@ -1,0 +1,298 @@
+import Link from "next/link";
+
+export const metadata = {
+  title: "Maple Sim",
+};
+
+<main className="relative min-h-screen overflow-hidden bg-slate-50 text-slate-900 dark:bg-[#0f1020] dark:text-slate-100">
+  <div className="pointer-events-none absolute inset-0">
+    <div className="absolute -top-40 left-1/2 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-violet-500/20 blur-3xl dark:bg-violet-500/30" />
+    <div className="absolute bottom-0 left-0 h-[520px] w-[520px] -translate-x-1/3 translate-y-1/3 rounded-full bg-sky-500/20 blur-3xl dark:bg-sky-500/30" />
+    <div className="absolute -bottom-48 right-0 h-[620px] w-[620px] translate-x-1/3 rounded-full bg-indigo-500/20 blur-3xl dark:bg-indigo-500/30" />
+  </div>
+
+  <section className="relative px-6 pb-16 pt-16">
+    <div className="mx-auto grid w-full max-w-6xl items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
+      <div className="space-y-6">
+        <div className="flex items-center gap-4">
+          <img
+            src={`${process.env.BASE_PATH ?? ""}/media/icon.png`}
+            alt="Maple Sim"
+            className="h-20 w-auto"
+          />
+          <img
+            src={`${process.env.BASE_PATH ?? ""}/media/team_logo.png`}
+            alt="Shenzhen Robotics Alliance"
+            className="h-12 w-auto opacity-90"
+          />
+        </div>
+
+        <p className="text-sm text-slate-600 dark:text-slate-300">
+          You are reading the documentation for a Beta version of maple-sim. API
+          references are subject to change in future versions.
+        </p>
+
+        <h1 className="text-4xl font-semibold leading-tight sm:text-5xl">
+          Elevating FRC Java Robot Simulations to the Next Level with Physics
+          Engines
+        </h1>
+
+        <p className="text-lg text-slate-700 dark:text-slate-200">
+          With maple-sim, we integrate the open-source Java rigid-body dynamics
+          engine, dyn4j, capable of simulating 2D forces and collisions between
+          rigid shapes.
+        </p>
+
+        <div className="flex flex-wrap gap-3">
+          <Link
+            href="/docs/getting-started/installing-maple-sim"
+            className="rounded-full bg-violet-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-violet-500"
+          >
+            Getting Started
+          </Link>
+          <Link
+            href="/docs"
+            className="rounded-full border border-slate-300 px-6 py-3 text-sm font-semibold text-slate-700 transition hover:border-slate-400 hover:text-slate-900 dark:border-slate-600 dark:text-slate-200 dark:hover:border-slate-500 dark:hover:text-white"
+          >
+            Online Documentation
+          </Link>
+          <a
+            href="https://www.youtube.com/watch?v=CBx1_Dosgec"
+            className="rounded-full border border-violet-200 bg-violet-50 px-6 py-3 text-sm font-semibold text-violet-700 transition hover:bg-violet-100 dark:border-violet-500/40 dark:bg-violet-500/10 dark:text-violet-200 dark:hover:bg-violet-500/20"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Watch Demo Video
+          </a>
+        </div>
+
+        <ul className="space-y-2 text-slate-700 dark:text-slate-200">
+          <li className="flex items-start gap-2">
+            <span className="mt-1 h-2 w-2 rounded-full bg-violet-500" />
+            <span>Test autonomous modes with pinpoint accuracy.</span>
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="mt-1 h-2 w-2 rounded-full bg-violet-500" />
+            <span>
+              Fine-tune advanced TeleOp enhancement features like
+              pathfinding-auto-alignment.
+            </span>
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="mt-1 h-2 w-2 rounded-full bg-violet-500" />
+            <span>
+              Optimize shooters and other subsystems, all while gathering
+              meaningful data from simulated physics.
+            </span>
+          </li>
+        </ul>
+
+        <p className="text-slate-700 dark:text-slate-200">
+          And the best part? You can achieve all of this without needing a real
+          robot on hand!
+        </p>
+      </div>
+
+      <div className="relative">
+        <div className="absolute -inset-6 rounded-[32px] bg-gradient-to-br from-violet-500/30 via-transparent to-sky-500/30 blur-2xl" />
+        <div className="relative overflow-hidden rounded-3xl border border-white/60 bg-white/80 shadow-xl backdrop-blur dark:border-white/10 dark:bg-white/5">
+          <img
+            src={`${process.env.BASE_PATH ?? ""}/media/demo%20video%20cover.png`}
+            alt="Maple Sim demo video cover"
+            className="h-auto w-full"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section className="px-6 pb-20">
+    <div className="mx-auto w-full max-w-6xl">
+      <div className="mb-8 flex items-center justify-between gap-4">
+        <div>
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white">
+            Online Documentation
+          </h2>
+          <p className="text-slate-600 dark:text-slate-300">
+            Please follow the guides below for quick setup.
+          </p>
+        </div>
+        <Link
+          href="/docs"
+          className="hidden text-sm font-semibold text-violet-600 transition hover:text-violet-500 dark:text-violet-300 dark:hover:text-violet-200 sm:inline"
+        >
+          View all docs →
+        </Link>
+      </div>
+
+      <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+        <Link
+          href="/docs/getting-started/installing-maple-sim"
+          className="group rounded-2xl border border-slate-200 bg-white/80 p-5 transition hover:border-violet-300 hover:shadow-lg dark:border-white/10 dark:bg-white/5 dark:hover:border-violet-400/60"
+        >
+          <h3 className="text-lg font-semibold text-slate-900 dark:text-white">
+            Installing maple-sim
+          </h3>
+          <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">
+            Install a library online with WPILib VSCode.
+          </p>
+          <span className="mt-4 inline-flex items-center text-sm font-semibold text-violet-600 group-hover:text-violet-500 dark:text-violet-300 dark:group-hover:text-violet-200">
+            View Documentation →
+          </span>
+        </Link>
+
+        <Link
+          href="/docs/core-concepts/using-the-simulated-arena"
+          className="group rounded-2xl border border-slate-200 bg-white/80 p-5 transition hover:border-violet-300 hover:shadow-lg dark:border-white/10 dark:bg-white/5 dark:hover:border-violet-400/60"
+        >
+          <h3 className="text-lg font-semibold text-slate-900 dark:text-white">
+            Using the Simulated Arena
+          </h3>
+          <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">
+            maple-sim simulates the interaction between the robot and its
+            surrounding environment.
+          </p>
+          <span className="mt-4 inline-flex items-center text-sm font-semibold text-violet-600 group-hover:text-violet-500 dark:text-violet-300 dark:group-hover:text-violet-200">
+            View Documentation →
+          </span>
+        </Link>
+
+        <Link
+          href="/docs/swerve-simulation/swerve-simulation-overview"
+          className="group rounded-2xl border border-slate-200 bg-white/80 p-5 transition hover:border-violet-300 hover:shadow-lg dark:border-white/10 dark:bg-white/5 dark:hover:border-violet-400/60"
+        >
+          <h3 className="text-lg font-semibold text-slate-900 dark:text-white">
+            Simulating Swerve Drivetrain
+          </h3>
+          <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">
+            This realistic simulation allows you to practice driving, test
+            autonomous routines, and fine-tune advanced functions such as
+            auto-alignment.
+          </p>
+          <span className="mt-4 inline-flex items-center text-sm font-semibold text-violet-600 group-hover:text-violet-500 dark:text-violet-300 dark:group-hover:text-violet-200">
+            View Documentation →
+          </span>
+        </Link>
+
+        <Link
+          href="/docs/mechanisms/simulating-intake"
+          className="group rounded-2xl border border-slate-200 bg-white/80 p-5 transition hover:border-violet-300 hover:shadow-lg dark:border-white/10 dark:bg-white/5 dark:hover:border-violet-400/60"
+        >
+          <h3 className="text-lg font-semibold text-slate-900 dark:text-white">
+            Simulating Intake
+          </h3>
+          <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">
+            Intakes, or mechanisms that extend from the robot to collect game
+            pieces from the field, are simulated by the IntakeSimulation class.
+          </p>
+          <span className="mt-4 inline-flex items-center text-sm font-semibold text-violet-600 group-hover:text-violet-500 dark:text-violet-300 dark:group-hover:text-violet-200">
+            View Documentation →
+          </span>
+        </Link>
+
+        <Link
+          href="/docs/mechanisms/simulating-projectiles"
+          className="group rounded-2xl border border-slate-200 bg-white/80 p-5 transition hover:border-violet-300 hover:shadow-lg dark:border-white/10 dark:bg-white/5 dark:hover:border-violet-400/60"
+        >
+          <h3 className="text-lg font-semibold text-slate-900 dark:text-white">
+            Simulating GamePiece Projectiles
+          </h3>
+          <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">
+            Projectiles are game pieces launched into the air, typically from
+            flywheels, modeled using basic projectile motion with gravity only.
+          </p>
+          <span className="mt-4 inline-flex items-center text-sm font-semibold text-violet-600 group-hover:text-violet-500 dark:text-violet-300 dark:group-hover:text-violet-200">
+            View Documentation →
+          </span>
+        </Link>
+
+        <Link
+          href="/docs/match-simulation/simulating-opponent-robots"
+          className="group rounded-2xl border border-slate-200 bg-white/80 p-5 transition hover:border-violet-300 hover:shadow-lg dark:border-white/10 dark:bg-white/5 dark:hover:border-violet-400/60"
+        >
+          <h3 className="text-lg font-semibold text-slate-900 dark:text-white">
+            Simulating Opponent Robots
+          </h3>
+          <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">
+            Opponent robots can be added to the field for realistic driver
+            practice.
+          </p>
+          <span className="mt-4 inline-flex items-center text-sm font-semibold text-violet-600 group-hover:text-violet-500 dark:text-violet-300 dark:group-hover:text-violet-200">
+            View Documentation →
+          </span>
+        </Link>
+      </div>
+    </div>
+  </section>
+
+  <section className="px-6 pb-24">
+    <div className="mx-auto w-full max-w-6xl">
+      <div className="mb-8 flex items-center justify-between gap-4">
+        <div>
+          <h2 className="text-2xl font-semibold text-slate-900 dark:text-white">
+            Getting Started With Templates
+          </h2>
+          <p className="text-slate-600 dark:text-slate-300">
+            Install a library online with WPILib VSCode, then pick a template to
+            get rolling.
+          </p>
+        </div>
+      </div>
+
+      <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+        <a
+          href="https://github.com/Shenzhen-Robotics-Alliance/CTRE-Swerve-MapleSim/"
+          className="group rounded-2xl border border-slate-200 bg-white/80 p-5 transition hover:border-violet-300 hover:shadow-lg dark:border-white/10 dark:bg-white/5 dark:hover:border-violet-400/60"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <h3 className="text-lg font-semibold text-slate-900 dark:text-white">
+            CTRE Generated Swerve Code
+          </h3>
+          <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">
+            Enhanced with maple-sim integration for improved chassis physics
+            simulation.
+          </p>
+          <span className="mt-4 inline-flex items-center text-sm font-semibold text-violet-600 group-hover:text-violet-500 dark:text-violet-300 dark:group-hover:text-violet-200">
+            Project Page →
+          </span>
+        </a>
+
+        <a
+          href="https://github.com/BroncBotz3481/YAGSL"
+          className="group rounded-2xl border border-slate-200 bg-white/80 p-5 transition hover:border-violet-300 hover:shadow-lg dark:border-white/10 dark:bg-white/5 dark:hover:border-violet-400/60"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <h3 className="text-lg font-semibold text-slate-900 dark:text-white">
+            Yet Another Generic Swervedrive Library (YAGSL)
+          </h3>
+          <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">
+            maple-sim is officially included in the amazing YAGSL for 2025.
+          </p>
+          <span className="mt-4 inline-flex items-center text-sm font-semibold text-violet-600 group-hover:text-violet-500 dark:text-violet-300 dark:group-hover:text-violet-200">
+            YAGSL 2025 release →
+          </span>
+        </a>
+
+        <a
+          href="https://github.com/Shenzhen-Robotics-Alliance/AdvantageKit-SparkSwerveTemplate-MapleSim/"
+          className="group rounded-2xl border border-slate-200 bg-white/80 p-5 transition hover:border-violet-300 hover:shadow-lg dark:border-white/10 dark:bg-white/5 dark:hover:border-violet-400/60"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <h3 className="text-lg font-semibold text-slate-900 dark:text-white">
+            AdvantageKit SparkMax/Flex Swerve Template
+          </h3>
+          <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">
+            Enhanced with maple-sim integration for improved chassis physics
+            simulation.
+          </p>
+          <span className="mt-4 inline-flex items-center text-sm font-semibold text-violet-600 group-hover:text-violet-500 dark:text-violet-300 dark:group-hover:text-violet-200">
+            Project Page →
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>

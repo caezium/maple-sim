@@ -1,0 +1,56 @@
+---
+title: "Simulation Details"
+---
+
+
+## Swerve-Drive Simulation Dynamics with Interactive Field
+The standout feature of this project is the integration of the [dyn4j physics engine](https://github.com/dyn4j/dyn4j), which enables a highly realistic and interactive simulation environment.
+
+In traditional swerve drive simulations, the drivetrain is typically modeled using several [DCMotorSim](https://github.wpilib.org/allwpilib/docs/release/java/edu/wpi/first/wpilibj/simulation/DCMotorSim.html) instances to simulate motor behavior. 
+
+In maple-sim, the drivetrain simulation goes a step further by calculating the frictional and propelling forces on each swerve module. 
+These forces are used to model the drivetrain as a rigid body, allowing for more accurate interaction with the field environment.
+
+<img src="media%2Fswerve%20drive%20dynamics.gif" alt="swerve drive dynamics.gif" />
+
+The realistic simulation dynamics allow you to test and refine auto paths as they would perform in real-world conditions.
+
+<img src="media%2Fpath%20following%20simulation.gif" alt="path following simulation.gif" />
+
+**[View Full Document on Swerve Simulation](./swerve-simulation/swerve-simulation-overview) >>>**
+
+## Odometry + Vision Simulation
+
+By modeling the interaction between the wheels and the floor, our simulation can replicate odometry measurement errors caused by skidding.
+
+Additionally, the IMU simulation includes drift, where hard impacts on the virtual robot will cause the IMU to behave similarly to how it would in real-world scenarios.
+
+<img src="media/odometry%20simulation.gif" alt="Odometry Sim" />
+
+Beyond odometry, you can integrate [photonlib](https://docs.photonvision.org/en/latest/docs/simulation/simulation-java.html) to simulate how vision-based odometry can correct your robot’s position.
+
+<img src="media%2Fvision%20simulation.gif" alt="vision simulation.gif" />
+
+## Game Pieces and Intake Simulation
+In **maple-sim**, game pieces on the field have collision boundaries and can interact with the robot.
+The simulator also supports a fixed intake module, allowing the robot to automatically collect game pieces upon contact.
+
+<img src="media%2Fgame%20pieces%20simulation.gif" alt="game pieces simulation.gif" />
+
+<img src="media/intakesim.gif" alt="intakesim.gif" />
+
+**[View Full Document on Intake Simulation](./mechanisms/simulating-intake) >>>**
+
+## Projectile Simulation
+In FRC, game pieces are often launched into the air. 
+**maple-sim** offers a straightforward physics simulation to model the behavior of these projectiles.
+
+<img src="media%2Fprojectile%20simulation.gif" alt="projectile simulation.gif" />
+
+**[View Full Document on Projectile Simulation](./mechanisms/simulating-projectiles) >>>**
+
+## Opponent Robots Simulation
+
+Simulated opponent robots can be manually controlled with a gamepad for defensive play or set to follow pre-programmed cycle paths. 
+Just like real robots, these opponents have collision boundaries, enabling drivers to practice both defensive and offensive strategies effectively.
+<img src="media/opponent%20robot%20simulation.gif" alt="opponentrobotsim.gif" />

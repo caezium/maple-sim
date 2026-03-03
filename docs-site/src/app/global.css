@@ -1,0 +1,38 @@
+@import 'tailwindcss';
+@import 'fumadocs-ui/css/catppuccin.css';
+@import 'fumadocs-ui/css/preset.css';
+
+:root {
+  --color-fd-primary: hsl(250, 84%, 60%);
+  --color-fd-primary-foreground: hsl(230, 24%, 20%);
+  --color-fd-accent: hsl(228, 26%, 90%);
+  --color-fd-accent-foreground: hsl(230, 24%, 20%);
+}
+
+.dark {
+  --color-fd-primary: hsl(250, 90%, 70%);
+  --color-fd-primary-foreground: hsl(210, 40%, 98%);
+  --color-fd-accent: hsl(235, 24%, 22%);
+  --color-fd-accent-foreground: hsl(210, 40%, 98%);
+}
+
+.grid.cards > ul {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.grid.cards > ul > li {
+  border: 1px solid var(--color-fd-border, rgba(148, 163, 184, 0.4));
+  background: var(--color-fd-card, rgba(255, 255, 255, 0.8));
+  border-radius: 16px;
+  padding: 1rem;
+}
+
+.grid.cards > ul > li hr {
+  margin: 0.75rem 0;
+  border-color: var(--color-fd-border, rgba(148, 163, 184, 0.4));
+}
