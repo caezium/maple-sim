@@ -34,6 +34,10 @@ jobs:
           node-version: 22
           cache: pnpm
           cache-dependency-path: docs-site/pnpm-lock.yaml
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
       - name: Enable Corepack
         run: corepack enable
       - name: Setup Pages
